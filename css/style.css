@@ -1,14 +1,16 @@
 :root {
   --main-color: #348e4c;
   --text-color: #333;
-  --heading1: 40px;
-  --heading2: 32px;
+  --heading1: 50px;
+  --heading2: 40px;
+  --baseFontSize: 18px;
 }
 
 /* 초기화 */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -23,11 +25,20 @@ ul {
 body {
   font-size: 100%;
   font-family: 'Noto Sans KR', sans-serif;
+  color: val(--text-color);
 }
 
 html,
 body {
   height: 100%;
+}
+
+h1 {
+  font-size: var(--heading1);
+}
+
+h2 {
+  font-size: var(--heading2);
 }
 
 #main_header {
@@ -60,11 +71,61 @@ body {
   color: var(--main-color)
 }
 
-.main{
+.main {
   width: 100%;
   height: calc(100% - 60px);
   background: #ccc;
 }
+
 .main .col {
-  width: ;
+  width: calc(100% / 4);
+  height: 100%;
+  background-color: #abc;
+  position: relative;
+}
+
+.main .col h2 {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  /* 중앙수직위치 = 50% - 요소높이 1/2 */
+  top: calc(50% - 109px / 2);
+}
+
+.main .col h2 span {
+  display: block;
+  font-size: small;
+  font-weight: normal;
+}
+
+.btn_link {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  width: 125px;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 1rem;
+  border: 1px solid rgba(255,255,255,0.5);
+  position: absolute;
+  bottom: 120px;
+  left: calc(50% - 124px / 2);
+}
+
+.btn_link:hover, .btn_link:active{
+  background-color: rgba(255,255,255,0.75);
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* 첫번째 칼럼 배경 스타일 지정 */
+.main .col:first-child {
+  background-image: url(./images/beijing.jpg);
+  background-size: cover;
+  /* background-position: center; */
 }
