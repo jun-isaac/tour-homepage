@@ -41,6 +41,15 @@ h2 {
   font-size: var(--heading2);
 }
 
+#main_header>nav>ul>li {
+  display: inline-block;
+  margin-left: 5em;
+}
+
+#main_header>nav>ul>li a:hover {
+  color: var(--main-color)
+}
+
 #main_header {
   width: 100%;
   background: #fff;
@@ -51,8 +60,9 @@ h2 {
 
 #main_header>h1 {
   position: absolute;
-  left: 20px;
-  top: 10px;
+  left: 30px;
+  top: 15px;
+  font-size: var(--heading1);
 }
 
 #main_header>nav {
@@ -60,15 +70,6 @@ h2 {
   right: 30px;
   top: 20px;
   font-weight: 700;
-}
-
-#main_header>nav>ul>li {
-  display: inline-block;
-  margin-left: 5em;
-}
-
-#main_header>nav>ul>li a:hover {
-  color: var(--main-color)
 }
 
 .main {
@@ -82,6 +83,7 @@ h2 {
   height: 100%;
   background-color: #abc;
   position: relative;
+  float:left;
 }
 
 .main .col h2 {
@@ -95,6 +97,7 @@ h2 {
   left: 0;
   /* 중앙수직위치 = 50% - 요소높이 1/2 */
   top: calc(50% - 109px / 2);
+  float:left;
 }
 
 .main .col h2 span {
@@ -115,6 +118,7 @@ h2 {
   position: absolute;
   bottom: 120px;
   left: calc(50% - 124px / 2);
+  
 }
 
 .btn_link:hover, .btn_link:active{
@@ -128,4 +132,21 @@ h2 {
   background-image: url(./images/beijing.jpg);
   background-size: cover;
   /* background-position: center; */
+}
+
+.main .col:nth-child(2) {
+  background-image: url(./images/osaka.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.main .col:nth-child(3) {
+  background-image: url(./images/hongkong.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.main .col:last-child {
+  background-image: url(./images/bangkok.jpg);
+  background-size: cover;
 }
